@@ -40,76 +40,82 @@ ______       _         _             _ _               _     _
 
 #pragma once
 #include"TargetFunctions.h"
-
+//A - DONE
 float moveHorizLine(float t) { 
-    return 0.5; // <= Modify this line
+    return 0.5;
 }
-
+//B - DONE
 float changeSlope(float t) { 
-    return t; // <= Modify this line
+    return t * 0.5f;
 }
-
+//C - DONE
 float changeSlopeAndMove(float t) { 
-    return t; // <= Modify this line
+    return (t * 0.25f) + 0.25f;
 }
-
+//D - DONE
 float makeParabolic(float t) {
-    return t;// <= Modify this line
+    return sqr(t);
 }
-
+//E - DONE
 float moveParabolaLeft(float t) { 
     //sqr(t) is same as t*t 
-    return sqr(t);   // <= Modify this line
+    return (sqr(t)) + (-1*(t)) + 0.25f;
 }  
-
+//F - DONE
 float moveParabolaUp(float t) { 
-    return sqr(t - 0.5);  // <= Modify this line
+    return sqr(t - 0.5) + 0.5;
 }
-
+//G - DONE
 float invertParabola(float t) { 
-    return sqr(t - 0.5); // <= Modify this line
+    return sqrt(t - 1) - 0.5;
 }
-
+//H - DONE
 float narrowParabola(float t) { 
-    return sqr(t - 0.5);  // <= Modify this line
+    return sqrt(t - 2) + 0.5;
 }
-
+//I - DONE
 float widenAndMoveParabola(float t) { 
-    return  4 * sqr(t - 0.5);  // <= Modify this line
+    return  2 * sqr(t - 0.75);
 }
-
-float moveCubicLeft(float t) { 
-    return  13 * cub(t) - 10 * sqr(t) + 1;  // <= Modify this line
+//J - DONE
+float moveCubicDown(float t) {
+    return  13 * cub(t) - 10 * sqr(t) + 0.75;
 }
-
-float moveCubicDown(float t) { 
-    return  13*cub(t) -10 * sqr(t) + 1 ;  // <= Modify this line
+//K - DONE
+float moveCubicLeft(float t) {
+    return  13 * cub(t + 0.25) - 10 * sqr(t + 0.25) + 1;
 }
-
+//L - DONE
 float easeIn(float t) { 
-    return t;   // <= Modify this line
+    return sqr(t);
 }
 
+//M
 float easeInUpsideDown(float t) { 
-    return t;  // <= Modify this line
+    return -sqr(t)+1;  // <= Modify this line
 }
 
+//N
 float easeInFlipLeftRight(float t) {
     return t; // <= Modify this line
 }
 
+//O
 float easeOut(float t) { 
     return t;  // <= Modify this line
 }
 
+//P
 float easeInThruCentre(float t) { 
     return t;  // <= Modify this line
 }
 
+//Q
 float easeOutThruCentre(float t) { 
     return t;  // <= Modify this line
 }
 
+//R
 float easeInOut(float t) { 
     // Modify this function
     if (t < 0.5)
@@ -118,18 +124,21 @@ float easeInOut(float t) {
         return 0.5;
 }
 
+//S
 float easeInCubic(float t) {
     // Modify this function
 
     return t * t;
 }
 
+//T
 float easeInCubicThruCenter(float t) {
     // Modify this function
 
     return t * t;
 }
 
+//U
 float easeInOutCubic(float t) {
     // Modify this function
 
